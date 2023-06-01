@@ -2,6 +2,10 @@ h1 {
     color:white;
     background:linear-gradient(.25turn,navy,rgb(120, 120, 210));
 }
+h2{
+    color:white;
+    background-color:blueviolet ;
+}
 h3 {
     color:white;
     background-color:navy;
