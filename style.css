@@ -1,14 +1,17 @@
 h1 {
     color:white;
     background:linear-gradient(.25turn,navy,rgb(120, 120, 210));
+    border:double;
 }
 h2{
     color:white;
-    background-color:blueviolet ;
+    background-color:navy;
+    border:dashed;
 }
 h3 {
     color:white;
-    background-color:navy;
+    background-color:rgb(120, 120, 210);
+    border:ridge;
 }
 a:link {
   color: blue;
@@ -18,4 +21,9 @@ a:visited {
 }
 a:hover {
     color:red;
+}
+.enshu{
+    display: grid;
+    border:groove;
+    border-width: 5px;
 }
