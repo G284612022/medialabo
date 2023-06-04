@@ -5,19 +5,19 @@ console.log('答え（デバッグ用）: ' + kotae);
 // 入力回数（予想回数）
 let kaisu = 0;
 // ここでは，ボタンを押したら hantei() を呼び出すイベント処理をする
-b= document.querySelector('button#print');
+let b= document.querySelector('button#print');
 b.addEventListener('click', hantei);
-result=document.querySelector('p#result');
+let result=document.querySelector('p#result');
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
-   i = document.querySelector('input[name="yoso"]');
-   yoso =Number(i.value);
+   let i = document.querySelector('input[name="yoso"]');
+   let yoso =Number(i.value);
   console.log(yoso);
   kaisu=kaisu+1;
-  ka = document.querySelector('span#kaisu');
+  let ka = document.querySelector('span#kaisu');
   ka.textContent=kaisu;
-  an = document.querySelector('span#answer');
+  let an = document.querySelector('span#answer');
   result=document.querySelector('p#result');
   an.textContent=yoso;
   // 課題3-1: 正解判定する
