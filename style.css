@@ -11,7 +11,7 @@ h2{
 h3 {
     color:white;
     background-color:rgb(120, 120, 210);
-    border:ridge;
+    border:ridge blueviolet;
 }
 a:link {
   color: blue;
