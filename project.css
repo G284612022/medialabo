@@ -1,0 +1,29 @@
+body {
+    background-color:rgb(0, 187, 255);
+}
+h1 {
+    text-align: center;
+    background-color: white;
+    border:dashed;
+}
+h3 {
+    text-align: center;
+}
+.country{
+    display: grid;
+    justify-content: center;
+    margin:0 auto;
+    border:groove rgb(89, 209, 14);
+    border-width: 5px;
+}
+div.country{
+    background: rgb(0, 255, 204);
+}
+.kekka{
+    display: grid;
+    justify-content: center;
+    margin:0 auto;
+    border:dotted  ;
+    border-width: 5px;
+    background-color: aqua;
+}
