@@ -26,4 +26,10 @@ div.country{
     border:dotted  ;
     border-width: 5px;
     background-color: aqua;
+    font-size: 150%;
+    width: 500px;
 }
+.kensaku{
+    text-align: center;
+}
+
