@@ -1,4 +1,4 @@
-let data = {
+/*let data = {
   "coord": {
     "lon": 116.3972,
     "lat": 39.9075
@@ -43,7 +43,45 @@ let data = {
   "id": 1816670,
   "name": "北京市",
   "cod": 200
-};
+};*/
 
 ////////// 課題3-2 ここからプログラムを書こう
-
+//console.log(data.name+","+data.main.temp_max+","+data.main.temp_min);
+//p=document.createElement('p');
+//p.textContent=data.name+","+data.main.temp_max+","+data.main.temp_min;
+let b =document.querySelector('button#kensaku');
+b.addEventListener('click',kensaku);
+let kekka=document.querySelector('p#kekka');
+function kensaku(){
+  let i=document.querySelector('input[name="id"]');
+  let id=i.value;
+  console.log(id);
+  let url ='https://www.nishita-lab.org/web-contents/jsons/openweather/360630.json';
+  axios.get(url)
+  .then(showResult)
+  .catch(showError)
+  .then(finish);
+}
+function showResult(resp){
+  let data=resp.data;
+  if (typeof data === 'string') {
+    data = JSON.parse(data);
+  }
+  console.log(data);
+  let to = document.querySelector('p#tosi');
+  to.textContent =data.name;
+  let te = document.querySelector('p#tenki');
+  te.textContent =data.whether.description;
+  let ma = document.querySelector('p#max');
+  ma.textContent =data.main.temp_max+'℃';
+  let mi =document.querySelector('p#min');
+  mi.textContent =data.main.temp_min+'℃';
+  let si =document.querySelector('p#situdo');
+  si.textContent =data.main.humidity+'%';
+}
+function showError(err) {
+  console.log(err);
+}
+function finish() {
+  console.log('終了します');
+}
