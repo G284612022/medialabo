@@ -4,15 +4,41 @@
     <meta charset="utf-8">
     <title>気象情報</title>
     <link rel="stylesheet"href="project.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="weather.js" defer></script>
   </head>
   <body>
-    <input type="search" name="id" size="10" >
-    <lavel name="id">国名</lavel>
-    <p>国　　　　　カイロ</p>
-    <p>天気　　　　晴れ</p>
-    <p>最高気温　　28°</p>
-    <p>最低気温　　6°</p>
-    <p>湿度　　　　30%</p>
+    <h1>世界の天気</h1>
+    <div><input type="search" name="id" size="30" >
+      <lavel name="id">都市IDを入力して</lavel>
+      <button id="kensaku">検索</button>
+    </div>
+    <div class="kekka">
+      <p>検索結果</p>
+    <p>都市:<span id=tosi></span></p>
+    <p>天気:<span id=tenki></span></p>
+    <p>最高気温:<span id=max></span></p>
+    <p>最低気温:<span id=min></span></p>
+    <p>湿度:<span id=situdo></span></p>
+  </div>
+    <h3>都市の検索ID一覧</h3>
+    <div class="country">
+    <div>
+      <ul>
+        <li>360630・・・ Cairo カイロ （エジプト）</li>
+        <li>524901・・・ Moscow モスクワ （ロシア）</li>
+        <li>993800・・・ Johannesburg ヨハネスブルク （南アフリカ）</li>
+        <li>1816670・・・ Beijing 北京 （中華人民共和国）</li>
+        <li>1850147・・・ Tokyo 東京 （日本）</li>
+        <li>1880252・・・ Singapore シンガポール</li>
+        <li>2147714・・・ Sydney シドニー （オーストラリア）</li>
+        <li>2147714・・・ Sydney シドニー （オーストラリア）</li>
+        <li>2968815・・・ Paris パリ （フランス）</li>
+        <li>3451189・・・ Rio de Janeiro リオデジャネイロ （ブラジル）</li>
+        <li>5128581・・・ New York ニューヨーク （アメリカ合衆国）</li>
+        <li>5368361・・・ Los Angeles ロサンゼルス （アメリカ合衆国）</li>
+      </ul>
+    </div>
+  </div>
   </body>
 </html>
