@@ -51,12 +51,12 @@
 //p.textContent=data.name+","+data.main.temp_max+","+data.main.temp_min;
 let b =document.querySelector('button#kensaku');
 b.addEventListener('click',kensaku);
-let kekka=document.querySelector('p#kekka');
+let kekka=document.querySelector('div#kekka');
 function kensaku(){
   let i=document.querySelector('input[name="id"]');
   let id=i.value;
   console.log(id);
-  let url ='https://www.nishita-lab.org/web-contents/jsons/openweather/360630.json';
+  let url ='https://www.nishita-lab.org/web-contents/jsons/openweather/'+(id)+'.json';
   axios.get(url)
   .then(showResult)
   .catch(showError)
@@ -68,15 +68,15 @@ function showResult(resp){
     data = JSON.parse(data);
   }
   console.log(data);
-  let to = document.querySelector('p#tosi');
-  to.textContent =data.name;
-  let te = document.querySelector('p#tenki');
-  te.textContent =data.whether.description;
-  let ma = document.querySelector('p#max');
+  let to=document.querySelector('span#tosi');
+  to.textContent=data.name;
+  let te = document.querySelector('span#tenki');
+  te.textContent =data.weather;
+  let ma = document.querySelector('span#max');
   ma.textContent =data.main.temp_max+'℃';
-  let mi =document.querySelector('p#min');
+  let mi =document.querySelector('span#min');
   mi.textContent =data.main.temp_min+'℃';
-  let si =document.querySelector('p#situdo');
+  let si =document.querySelector('span#situdo');
   si.textContent =data.main.humidity+'%';
 }
 function showError(err) {
