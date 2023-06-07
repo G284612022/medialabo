@@ -71,7 +71,7 @@ function showResult(resp){
   let to=document.querySelector('span#tosi');
   to.textContent=data.name;
   let te = document.querySelector('span#tenki');
-  te.textContent =data.weather;
+  te.textContent =data.weather[0].description;
   let ma = document.querySelector('span#max');
   ma.textContent =data.main.temp_max+'℃';
   let mi =document.querySelector('span#min');
